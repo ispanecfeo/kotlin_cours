@@ -7,16 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <Space
+    <LinearLayout
+        android:id="@+id/edit_texts"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:tooltipText="@string/name" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:tooltipText="age" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/out_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
     <Button
         android:id="@+id/hello_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/hello_kotlin" />
+        android:text="@string/add" />
 
 </LinearLayout>
